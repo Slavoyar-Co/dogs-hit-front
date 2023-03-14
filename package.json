@@ -9,7 +9,7 @@
     "test": "jest",
     "lint": "eslint --debug src/",
     "lint:write": "eslint --debug src/ --fix",
-    "prettier": "prettier --write src/**/*.js"
+    "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx}"
   },
   "dependencies": {
     "react": "18.2.0",
@@ -52,7 +52,7 @@
     }
   },
   "lint-staged": {
-    "*.(js|jsx)": [
+    "*.(js|jsx|ts|tsx)": [
       "npm run lint:write",
       "git add"
     ]
